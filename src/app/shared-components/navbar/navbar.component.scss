@@ -1,0 +1,26 @@
+.spacer{
+  flex: 1 1 auto;
+}
+
+a {
+  font-size: 15px;
+  font-style: italic;
+  margin-left: 10px;
+}
+
+a:hover {
+  cursor: pointer;
+  background-color: rgb(37, 199, 145);
+  transition: background-color 2s;
+  color:rgb(90, 51, 77);
+}
+
+span{
+  color:rgb(90, 51, 77);
+  font-weight: bold;
+  font-style: italic;
+
+  .drive{
+    padding-left: 20px;
+  }
+}
