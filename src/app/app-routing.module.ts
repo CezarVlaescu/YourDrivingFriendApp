@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
+import { LazyLoadGuard } from './guards/lazy-load.guard';
+import { CreditsComponent } from './components/credits/credits.component';
 
 
 const routes: Routes = [
@@ -20,14 +22,22 @@ const routes: Routes = [
   },
   {
     path: 'services',
-    // loadChildren:'src/app/modules/service-module#ServiceModule' // lazy loading
     component : ServicesComponent,
 
   },
-  // {
-  //   path: 'home',
-  //   loadChildren : () => import('./components/home.module').then(m => m.HomeModule)
-  // }
+  {
+    path: 'vision',
+    loadChildren : () => import('./components/vision.module').then(m => m.VisionModule) // lazy loading ( assciate module containing the component only be loaded when route is visited )
+  },
+  {
+    path : 'login',
+    canLoad : [LazyLoadGuard],
+    loadChildren: () => import('./components/login.module').then(m => m.LoginModule)
+  },
+  {
+    path : 'credits',
+    component : CreditsComponent
+  }
 ];
 
 @NgModule({

@@ -5,6 +5,7 @@ import { CoverLeftComponent } from './cover-left/cover-left.component';
 import { CoverRightComponent } from './cover-right/cover-right.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
+import { VisionComponent } from './vision/vision.component';
 
 
 
@@ -14,7 +15,8 @@ import { ServicesComponent } from './services/services.component';
     CoverLeftComponent,
     CoverRightComponent,
     AboutComponent,
-    ServicesComponent
+    ServicesComponent,
+    VisionComponent
   ],
   imports: [
     CommonModule
